@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tickets</title>
+</head>
+<body>
+    <h1>Tickets</h1>
+    <ul>
+        {% for ticket in tickets %}
+            <li><a href="{% url 'view_ticket' ticket.pk %}">{{ ticket.title }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
